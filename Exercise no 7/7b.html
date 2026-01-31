@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function temperature converter</title>
+</head>
+<body>
+    <script>
+        let fahTemp = "";
+        let celTemp = 25;
+        let fahTemp1 = 86;
+        let celTemp1 = "";
+        
+        function FahConvertor(){
+            fahTemp = (celTemp * 9/5) + 32
+            console.log(fahTemp);
+            
+        }
+        FahConvertor();
+
+        function celConvertor(){
+            celTemp1  = (fahTemp1 - 32) * 5 / 9
+            console.log(celTemp1);
+        }
+        celConvertor();
+
+        
+    </script>
+</body>
+</html>

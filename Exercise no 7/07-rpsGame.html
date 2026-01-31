@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper Siccors game</title>
+</head>
+<body>
+
+    <p>Rock Paper Sicissor</p>
+
+    <button onclick="
+     playGame('rock');
+
+    ">rock</button>
+
+    <button onclick="
+      playGame('paper');
+
+    ">Paper</button>
+
+
+    <button onclick="
+        playGame('scissors');
+      
+    ">scissors</button>
+
+
+    <script>
+        function playGame(playerMove){
+        const computerMove = pickComputerMove();
+
+    let result = '';
+        // Scissor move logic if statements
+    if(playerMove === 'scissors'){
+        if(computerMove === 'rock'){
+        result = 'You lose ';
+        }
+        else if(computerMove === 'paper'){
+            result = 'You win ';
+        }
+        else if(computerMove === 'scissors'){
+            result = 'Tie';
+        }
+
+       // Paper move logic if statements
+    } else if (playerMove === 'paper'){
+        if(computerMove === 'rock'){
+        result = 'You win '
+        }
+        else if(computerMove === 'paper'){
+            result = 'Tie '
+        }
+        else if(computerMove === 'scissors'){
+            result = 'You lose '
+        }
+
+        // rock move logic if statements
+    } else if(playerMove === 'rock'){
+        if(computerMove === 'rock'){
+        result = 'Tie';
+        }
+        else if(computerMove === 'paper'){
+            result = 'You lose';
+        }
+        else if(computerMove === 'scissors'){
+            result = 'You win';
+        }
+    }
+
+    // Window pop up shows result of the game by using window.alert 
+    alert(`You picked ${playerMove}. Computer picked ${computerMove}. ${result} `);
+    
+    }
+        
+    // Computer move logic if-else statements
+    function pickComputerMove(){
+        const randomNumber = Math.floor(Math.random() * 3)
+        let computerMove = '';
+
+        
+        if(randomNumber === 0){
+            computerMove = 'rock';
+        }
+        else if(randomNumber === 1){
+            computerMove = 'paper';
+        }
+        else{
+            computerMove = 'scissors';
+        }
+        return computerMove;
+
+
+            }
+
+    </script>
+</body>
+</html>
