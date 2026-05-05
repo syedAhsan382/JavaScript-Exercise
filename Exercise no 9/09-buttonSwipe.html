@@ -1,0 +1,47 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Button changes into another color</title>
+    </head>
+    <style>
+        #change{
+            border: none;
+            font-weight: 600;
+            width: 200px;
+            height:100px;
+            transition: background-color 0.3s ease;
+        
+        }
+        #reset{
+            border: none;
+            font-weight: 600;
+            width: 200px;
+            height:100px;
+            transition: background-color 0.3s ease;
+
+        }
+    </style>
+    <body>
+
+        <button onclick="changeColor()" id="change" >Subject</button>
+        <button onclick="resetColor()" id="reset">Reset</button>
+
+
+        <script>
+            const btn = document.getElementById("change");
+
+            function changeColor(){
+                btn.style.backgroundColor = 'rgb(153, 179, 41)';
+                
+            }
+            function resetColor(){
+                btn.style.background = "";
+
+
+            }
+
+        </script>
+    </body>
+    </html>

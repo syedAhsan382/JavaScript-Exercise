@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme changer</title>
+</head>
+<style>
+    body {
+        background-color: white;
+        color: black;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .darkmode {
+        background-color: #121212;
+        color: white;
+    }
+</style>
+<body>
+    <h1>This is a project to see the Dark theme feature</h1>
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repudiandae neque provident ratione eum placeat a. Quos nemo reiciendis laudantium quae placeat, quisquam quia. Libero, culpa! Explicabo, nemo soluta at asperiores, corporis facere eligendi harum deleniti ipsum illo esse amet impedit autem consequuntur iste in quisquam aliquam, possimus hic rem ullam.</p>
+
+    <button id="theme-button">Change Theme</button>
+
+
+    <script>
+        const themeButton = document.getElementById('theme-button')
+
+        themeButton.addEventListener("mouseout", changeTheme);
+
+        function changeTheme(){
+            document.body.classList.toggle('darkmode')
+        }
+    </script>
+</body>
+</html>

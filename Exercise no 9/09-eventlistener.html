@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learing addEventListener</title>
+</head>
+<body>
+    <button id="my-button">My Button</button>
+    <p id="counter-display"></p>
+
+
+    <script>
+        const button = document.getElementById('my-button');
+        const counterDisplay = document.getElementById('counter-display');
+        let counter = 0;
+
+        button.addEventListener('click', increaseCounter);
+
+        function increaseCounter(){
+            counter++;
+            counterDisplay.innerText = counter;
+        }
+
+    </script>
+</body>
+</html>

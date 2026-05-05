@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changing Button</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1a1a1a;
+        }
+
+        #colorBtn {
+            padding: 16px 40px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: #e74c3c;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+    </style>
+</head>
+<body>    
+
+    <button id="colorBtn" onclick="changeColor()">Click Me</button> //chageColor function used to give functionality to the "Click me"  button
+
+    <script>
+        const btn = document.getElementById("colorBtn");
+
+        const colors = ["#e74c3c", "#3498db", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c", "#e67e22", "#e91e63"];
+
+        let index = 0;  // This project is just for reference. Form the current level it is too hard to implement for now. We will do it later
+
+        function changeColor() {
+            index = (index + 1) % colors.length;
+            btn.style.backgroundColor = colors[index]; //This is a CSS property which is used to change or set background into different colors
+            
+        }
+    </script>
+
+</body>
+</html>

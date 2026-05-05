@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integer counter</title>
+</head>
+<body>
+    <label id="countlabel">0</label>
+    <div id="btnContainer">
+        <button onclick="decrease()" id="deBtn">Decrease</button>
+        <button onclick="increase()" id="incBtn">Increase</button>
+        <button onclick="reset()" id="reBtn">Reset</button>
+        
+       
+
+    </div>
+
+    <script>
+        const decreaseBtn = document.getElementById('deBtn');
+        const increaseBtn = document.getElementById('incBtn');
+        const resetBtn = document.getElementById('reBtn');
+        const countl = document.getElementById('countlabel');
+        let count = 0;
+
+
+        function increase(){
+            count++;
+            countl.textContent = count;
+        }
+        function decrease(){
+            count--;
+            countl.textContent = count;
+        }
+        function reset(){
+            count = 0;
+            countl.textContent = count;
+        }
+
+        
+
+
+
+        
+
+    </script>
+    
+</body>
+</html>

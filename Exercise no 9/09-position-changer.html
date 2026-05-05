@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move text</title>
+</head>
+<style>
+    #text{
+        position: relative;
+        top: 0px;
+        transition: top 1.2s ease;
+    }
+
+
+    
+</style>
+<body>
+    <button onclick="moveText()">Move</button>
+    <p id="text">Hello</p>
+
+    <script>
+        const text = document.getElementById('text');
+        let isDown = false;
+
+        function moveText(){
+            if(isDown){
+                text.style.top = '0px';
+                isDown = false;
+            }
+            else{
+                text.style.top = '500px';
+                isDown = true;
+            }
+
+        }
+    </script>
+</body>
+</html>

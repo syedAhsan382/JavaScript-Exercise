@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Challange exercise</title>
+</head>
+<body>
+    <h2>Whatever you type will be seen here</h2>
+    <input  type="text" id="myInput"> 
+    <p id="result"></p>
+
+    <script>
+        const myInput = document.getElementById('myInput');
+        const  result = document.getElementById('result');
+
+        myInput.addEventListener('keyup', func)
+
+        function func(){
+            result.textContent = myInput.value
+        }
+    </script>
+</body>
+</html>

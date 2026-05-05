@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle text back and forth</title>
+</head>
+<body>
+    <button onclick="hideShow()">Click it</button>
+    <p id="hello">To make this text dissappear click this button</p>
+
+    <script>
+        function hideShow(){
+            const text = document.getElementById("hello")
+
+            if(text.style.display === 'none'){
+                text.style.display = 'block';
+            } else {
+                text.style.display = 'none';
+            } 
+
+        }
+
+
+
+
+    </script>
+
+</body>
+</html>

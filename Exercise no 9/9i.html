@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Updating the project</title>
+</head>
+<body>  
+
+    <p id="para"></p>
+    
+    <button id="Sbtn">Show Quantity</button>
+
+
+    <button id="btn1">Add to Cart</button>
+
+
+    <button id="btn2">+2</button>
+
+    <button id="btn3">+3</button>
+
+    <button id="btn4">+4</button>
+
+    <button id="btn5">+5</button>
+
+    <button id="btn-2">-2</button>
+
+    <button id="btn-3">-3</button>
+
+    <button id="btn-1">Remove from cart</button>
+
+    <button id="btn0">Reset Cart</button>
+
+
+    <script>
+        let cartQuantity = 0;
+ 
+        const result = document.getElementById('para');
+        const Sbtn = document.getElementById('Sbtn');
+        const btn0 = document.getElementById('btn0');
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+        const btn3 = document.getElementById('btn3');
+        const btn4 = document.getElementById('btn4');
+        const btn5 = document.getElementById('btn5');
+        const dbtn2 = document.getElementById('btn-2');
+        const dbtn3 = document.getElementById('btn-3');
+        const dbtn1 = document.getElementById('btn-1');
+
+        btn0.addEventListener('click', Quantity0);
+        Sbtn.addEventListener('click', ShowQuantity);
+        btn1.addEventListener('click', increaseQuantity1);
+        btn2.addEventListener('click', increaseQuantity2);
+        btn3.addEventListener('click', increaseQuantity3);
+        btn4.addEventListener('click', increaseQuantity4);
+        btn5.addEventListener('click', increaseQuantity5);
+        dbtn2.addEventListener('click', decreaseQuantity2);
+        dbtn3.addEventListener('click', decreaseQuantity3);
+        dbtn1.addEventListener('click', decreaseQuantity1);
+       
+
+
+        function increaseQuantity1(){
+            cartQuantity+=1;
+            result.innerText = cartQuantity;
+        }
+
+         function increaseQuantity2(){
+            cartQuantity+=2;
+            result.innerText = cartQuantity;
+        }
+
+         function increaseQuantity3(){
+            cartQuantity+=3;
+            result.innerText = cartQuantity;
+        }
+
+         function increaseQuantity4(){
+            cartQuantity+=4;
+            result.innerText = cartQuantity;
+        }
+
+         function increaseQuantity5(){
+            cartQuantity+=5;
+            result.innerText = cartQuantity;
+        }
+
+         function  decreaseQuantity2(){
+            cartQuantity-=2;
+            result.innerText = cartQuantity;
+        }
+
+         function  decreaseQuantity3(){
+            cartQuantity-=3;
+            result.innerText = cartQuantity;
+        }
+
+
+         function  decreaseQuantity1(){
+            cartQuantity-=1;
+            result.innerText = cartQuantity;
+        }
+
+        function Quantity0(){
+            cartQuantity=0;
+            result.innerText = 'Cart is reset  ' + cartQuantity;  // Did this way cause when write two innerText the first line overwrites the first one 
+
+        }
+
+        function  ShowQuantity(){
+            result.innerText = cartQuantity;
+        
+        }
+
+         
+
+
+    </script>
+</body>
+</html>
