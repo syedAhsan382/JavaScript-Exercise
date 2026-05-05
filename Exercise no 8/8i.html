@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin flip game</title>
+</head>
+<body>
+    
+    <h1>Coin Toss Game</h1>
+
+    <button id="headsBtn">Heads</button>
+    <button id="tailsBtn">Tails</button>
+
+    <p id="result"></p>  <!--Used to show the result on the webpage-->
+
+    <script>
+        function coinToss(guess) {  //Coin Toss function
+            let num = Math.random();
+            let result = '';
+
+            if (num < 0.5) {
+                result = 'heads';
+            } else {
+                result = 'tails';
+            }
+
+            let message = `Coin flip: ${result} — ${result === guess ? "You win! 🎉" : "You lose 😢"}`;
+            document.getElementById('result').textContent = message;  //The message is 
+        }
+
+        document.getElementById('headsBtn').addEventListener('click', function() {
+            coinToss('heads');
+        });
+
+        document.getElementById('tailsBtn').addEventListener('click', function() {
+            coinToss('tails');
+        });
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin game</title>
+</head>
+<style>
+    .headsbtn,
+    .tailsbtn{
+        background-color: rgb(166, 192, 21);
+        color:white;
+        border: rgb(0, 0, 0) solid;
+        border-width: 5px;
+        display: inline-block;
+        border-radius:50%;
+        font-weight: 600;
+        width:100px;
+        height: 100px;
+        font-size: large;
+        
+        
+    }
+</style>
+<body>
+    <p>Coin Toss Game</p>
+
+    <button class="headsbtn" onclick="coinToss('heads')">Heads</button>
+    <button class="tailsbtn" onclick="coinToss('tails')">Tails</button>
+
+    <script>
+        function coinToss(guess){
+            let num = Math.random();
+            let result = '';
+
+            if(num > 0.5){
+                result = 'heads';
+            }
+            else{
+                result = 'tails';
+            }
+
+            console.log(`Coin Toss: ${result}`);
+
+
+            if(result === guess){
+                alert(`Coin toss is ${result} - You win `);
+            }
+            else{
+                alert(`Coin toss is ${result} - You lose`);
+            }
+
+
+
+
+
+        }
+
+        
+
+    </script>
+</body>
+</html>

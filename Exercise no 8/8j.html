@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice of elementById\ </title>
+</head>
+<style>
+    h1{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: 700;
+    }
+</style>
+<body>
+    <div>
+        <h1 id="heading">This is a heading of h1</h1>
+    </div>
+
+    <button onclick="change()">Change the heading</button>
+
+
+    <script>
+
+        function change(){  //The practice of using getElementById
+
+        let result = document.getElementById(`heading`);
+
+        if(result.innerHTML === "This is a heading of h1"){
+            result.innerHTML = "Changed ";
+        }else{
+            result.innerHTML = "This is a heading of h1";
+        }
+
+        } 
+
+        alert(`You picked`)
+
+    </script>
+</body>
+</html>
