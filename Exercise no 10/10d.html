@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming button</title>
+</head>
+<style>
+    .js-button{
+        width:100px;
+        height: 40px;
+    
+    }
+    .active{
+        width:100px;
+        height: 40px;
+        color: white;
+        background-color: black;
+        border:none;
+        border-radius: 5px;
+
+    }
+
+</style>
+<body>
+    <button class="js-button">Gaming</button>
+
+    <script>
+        const button = document.querySelector('.js-button')
+
+        button.addEventListener('click', changeTheme)
+
+        function changeTheme(){
+            button.classList.toggle('active');
+            
+        }
+       
+
+    </script>
+</body>
+</html>

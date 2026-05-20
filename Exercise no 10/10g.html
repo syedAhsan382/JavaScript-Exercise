@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple choice buttons</title>
+</head>
+<style>
+    .js-Gamingbtn,
+    .js-Musicbtn,
+    .js-Techbtn{
+         width:100px;
+        height: 40px;
+        margin-right: 10px;
+        
+    }
+
+     .active{
+        width:100px;
+        height: 40px;
+        color: white;
+        background-color: black;
+        border:none;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+    }
+
+    
+
+</style>
+<body>
+    <button class="js-Gamingbtn">Gaming</button>
+    <button class="js-Musicbtn">Music</button>
+    <button class="js-Techbtn">Tech</button>
+
+    <script>
+        const Gamingbtn = document.querySelector('.js-Gamingbtn');
+        const Musicbtn = document.querySelector('.js-Musicbtn');
+        const Techbtn = document.querySelector('.js-Techbtn');
+
+        Gamingbtn.addEventListener('click', changeTheme)
+        Musicbtn.addEventListener('click', changeTheme)
+        Techbtn.addEventListener('click', changeTheme)
+         
+
+        function changeTheme(){
+            this.classList.toggle('active')
+
+        }
+        
+
+
+
+
+    </script>
+</body>
+</html>
+
+

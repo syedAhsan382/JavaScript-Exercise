@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .firstPara,
+    .secondPara,
+    .thirdPara,
+    .forthPara,
+    .fifthPara{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .js-subscribe-button{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: black;
+        color:white;
+        border:none;
+        width: 100px;
+        height: 40px;
+        border-radius:20px;
+        font-weight: 600;
+        margin-bottom: 30px;
+
+    }
+    .js-calculate-btn{
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #008000;
+        color:white;
+        border:none;
+        width: 100px;
+        height: 40px;
+        
+      
+        margin-bottom: 30px;
+        
+    }
+    .js-cost-input{
+        padding:10px;
+        width:200px
+    }
+
+
+</style>
+<body>
+    <p class="firstPara">YouTube Subscribe Button</p>
+    <button onclick="subscribe()" class="js-subscribe-button">Subscribe</button> 
+
+    <p class="secondPara">Amazon Shipping Calculator</p>
+    <p class="thirdPara">Order under $40 = +$10 shipping.</p>
+    <p class="forthPara">Order over $40 = FREE shipping.</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="handleCostKeydown(event)">
+    <button class="js-calculate-btn" onclick="calculateTotal()">Calculate</button>
+    <p class="js-total-cost"></p>       
+
+    <p class="fifthPara">Rock Paper Scissors</p>
+    <a herf="https://www.youtube.com/watch?v=mBHRPeg8zPU">Click here</a>
+
+    <script>
+        function handleCostKeydown(event){
+            if(event.key === 'Enter'){
+                calculateTotal();
+            }
+        }
+       function calculateTotal() {
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value);
+
+        if (cost < 40) {
+        cost = cost + 10;
+        }
+        
+
+        document.querySelector('.js-total-cost').innerHTML = `$${cost}`;
+    }
+
+        function subscribe(){
+            const buttonElement = document.querySelector('.js-subscribe-button');
+
+            if(buttonElement.innerText === 'Subscribe'){    
+                buttonElement.innerHTML = 'Subscribed';
+            }else {
+                buttonElement.innerHTML = 'Subscribe';  
+            }
+
+        }    
+
+        
+
+
+
+    </script>
+</body>
+</html>

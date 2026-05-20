@@ -1,0 +1,19 @@
+.js-Gamingbtn,
+    .js-Musicbtn,
+    .js-Techbtn{
+         width:100px;
+        height: 40px;
+        margin-right: 10px;
+        
+    }
+
+     .active{
+        width:100px;
+        height: 40px;
+        color: white;
+        background-color: black;
+        border:none;
+        border-radius: 5px;
+        transition: 0.3s ease;
+
+    }
